@@ -3,8 +3,6 @@ import app from './app';
 
 const port: number = 5000;
 
-
-
 // DB Connection
 async function bootstrap() {
     try {
