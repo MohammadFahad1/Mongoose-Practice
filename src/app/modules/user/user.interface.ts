@@ -1,3 +1,5 @@
+import { Model } from "mongoose";
+
 export interface IUser {
     id: string;
     role: "student";
@@ -14,4 +16,14 @@ export interface IUser {
     emergencyContactNo: string;
     presentAddress: string;
     permanentAddress: string;
+}
+
+// Static
+interface UserModel extends Model<IUser> {
+    getAdminUsers(): IUser[];
+}
+
+// Instance
+export interface IUserMethods {
+    fullName(): string;
 }
